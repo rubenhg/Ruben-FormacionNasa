@@ -34,6 +34,10 @@ class LogginViewController: UIViewController {
     }
     
     @IBAction func logginAction(_ sender: Any) {
+//        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        let nasaListViewController = storyBoard.instantiateViewController(withIdentifier: "nasaListViewController") as! NasaListViewController
+//        nasaListViewController.modalPresentationStyle = .fullScreen
+//        present(nasaListViewController, animated: true, completion: nil)
     }
     
 
