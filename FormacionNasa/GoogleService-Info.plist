@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>941339465609-3paug4vgeoj525fv60hgs9o9p0q9fm5q.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.941339465609-3paug4vgeoj525fv60hgs9o9p0q9fm5q</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDpary3VwksL0frbXMjDiaSOMrk2cgQdic</string>
+	<key>GCM_SENDER_ID</key>
+	<string>941339465609</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>es.plexus.ios.nasapp</string>
+	<key>PROJECT_ID</key>
+	<string>nasa-plexus</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nasa-plexus.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:941339465609:ios:e500de424456743a7ef358</string>
+	<key>DATABASE_URL</key>
+	<string>https://nasa-plexus.firebaseio.com</string>
+</dict>
+</plist>
