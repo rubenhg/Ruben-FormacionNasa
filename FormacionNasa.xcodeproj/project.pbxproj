@@ -15,6 +15,8 @@
 		7DDBA9E125384AA900811277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DDBA9DF25384AA900811277 /* LaunchScreen.storyboard */; };
 		7DDBA9EC25384AA900811277 /* FormacionNasaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBA9EB25384AA900811277 /* FormacionNasaTests.swift */; };
 		7DDBA9F725384AA900811277 /* FormacionNasaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBA9F625384AA900811277 /* FormacionNasaUITests.swift */; };
+		7DDBAA0625385B4400811277 /* LogginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDBAA0525385B4400811277 /* LogginViewController.swift */; };
+		7DDBAA0825385B9E00811277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DDBAA0725385B9E00811277 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7DDBA9F225384AA900811277 /* FormacionNasaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormacionNasaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDBA9F625384AA900811277 /* FormacionNasaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormacionNasaUITests.swift; sourceTree = "<group>"; };
 		7DDBA9F825384AA900811277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DDBAA0525385B4400811277 /* LogginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogginViewController.swift; sourceTree = "<group>"; };
+		7DDBAA0725385B9E00811277 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		7DDBA9D325384AA800811277 /* FormacionNasa */ = {
 			isa = PBXGroup;
 			children = (
+				7DDBAA0425385B1C00811277 /* LogginScreen */,
 				7DDBA9D425384AA800811277 /* AppDelegate.swift */,
 				7DDBA9D625384AA800811277 /* SceneDelegate.swift */,
 				7DDBA9D825384AA800811277 /* ContentView.swift */,
@@ -106,6 +111,7 @@
 				7DDBA9DF25384AA900811277 /* LaunchScreen.storyboard */,
 				7DDBA9E225384AA900811277 /* Info.plist */,
 				7DDBA9DC25384AA900811277 /* Preview Content */,
+				7DDBAA0725385B9E00811277 /* Main.storyboard */,
 			);
 			path = FormacionNasa;
 			sourceTree = "<group>";
@@ -134,6 +140,14 @@
 				7DDBA9F825384AA900811277 /* Info.plist */,
 			);
 			path = FormacionNasaUITests;
+			sourceTree = "<group>";
+		};
+		7DDBAA0425385B1C00811277 /* LogginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7DDBAA0525385B4400811277 /* LogginViewController.swift */,
+			);
+			path = LogginScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DDBA9E125384AA900811277 /* LaunchScreen.storyboard in Resources */,
+				7DDBAA0825385B9E00811277 /* Main.storyboard in Resources */,
 				7DDBA9DE25384AA900811277 /* Preview Assets.xcassets in Resources */,
 				7DDBA9DB25384AA900811277 /* Assets.xcassets in Resources */,
 			);
@@ -267,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DDBAA0625385B4400811277 /* LogginViewController.swift in Sources */,
 				7DDBA9D525384AA800811277 /* AppDelegate.swift in Sources */,
 				7DDBA9D725384AA800811277 /* SceneDelegate.swift in Sources */,
 				7DDBA9D925384AA800811277 /* ContentView.swift in Sources */,
