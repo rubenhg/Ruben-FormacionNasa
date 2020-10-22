@@ -107,14 +107,29 @@
                     <view key="view" contentMode="scaleToFill" id="w0L-av-diN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tI6-9v-5Sa">
+                                <rect key="frame" x="0.0" y="122" width="414" height="691"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.80499091680000001" green="0.87218511750000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="tI6-9v-5Sa" firstAttribute="bottom" secondItem="1xP-3P-LHw" secondAttribute="bottom" id="M55-xP-gXP"/>
+                            <constraint firstItem="tI6-9v-5Sa" firstAttribute="top" secondItem="1xP-3P-LHw" secondAttribute="top" constant="78" id="Vl5-we-OwZ"/>
+                            <constraint firstItem="tI6-9v-5Sa" firstAttribute="trailing" secondItem="1xP-3P-LHw" secondAttribute="trailing" id="f0k-z8-LHX"/>
+                            <constraint firstItem="tI6-9v-5Sa" firstAttribute="leading" secondItem="1xP-3P-LHw" secondAttribute="leading" id="slk-XY-qyf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1xP-3P-LHw"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Listado" id="7Zx-bS-TM3"/>
+                    <connections>
+                        <outlet property="tableView" destination="tI6-9v-5Sa" id="6yL-Nn-qZO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gk3-av-lzZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="-480"/>
+            <point key="canvasLocation" x="297.10144927536237" y="-480.13392857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IRe-ez-E3A">
