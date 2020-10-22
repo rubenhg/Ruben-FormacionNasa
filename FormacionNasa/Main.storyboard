@@ -91,14 +91,36 @@
                     <view key="view" contentMode="scaleToFill" id="Twz-gN-OIl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5bY-CI-KjI">
+                                <rect key="frame" x="0.0" y="122" width="414" height="691"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yyr-Le-KmL">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="0.80499091680000001" green="0.87218511750000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="5bY-CI-KjI" firstAttribute="leading" secondItem="AdK-x6-fw5" secondAttribute="leading" id="CCd-iL-dNI"/>
+                            <constraint firstItem="5bY-CI-KjI" firstAttribute="trailing" secondItem="AdK-x6-fw5" secondAttribute="trailing" id="fa8-01-oP5"/>
+                            <constraint firstItem="5bY-CI-KjI" firstAttribute="bottom" secondItem="AdK-x6-fw5" secondAttribute="bottom" id="gv7-09-VWz"/>
+                            <constraint firstItem="5bY-CI-KjI" firstAttribute="top" secondItem="AdK-x6-fw5" secondAttribute="top" constant="78" id="t8r-Gp-jZ8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AdK-x6-fw5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Collection" id="2mK-ex-yIy"/>
+                    <connections>
+                        <outlet property="collectionView" destination="5bY-CI-KjI" id="amM-QX-hGf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tgm-Ke-e16" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="168"/>
+            <point key="canvasLocation" x="297.10144927536237" y="167.41071428571428"/>
         </scene>
         <!--Listado-->
         <scene sceneID="U9z-hM-aNk">
