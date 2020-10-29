@@ -18,19 +18,43 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //image.image = UIImage(url: URL(string: nasaData?.image ?? ""))
+        titleLabel.text = nasaData?.title
+        dateLabel.text = nasaData?.date
+        descriptionLabel.text = nasaData?.explanation
+        image.addTapGesture(tapNumber: 1, target: self, action: #selector(imageTapped(_:)))
 
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: imageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
     }
-    */
+    
 
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
+    }
+ 
+
+}
+
+extension UIView {
+  func addTapGesture(tapNumber: Int, target: Any, action: Selector) {
+    let tap = UITapGestureRecognizer(target: target, action: action)
+    tap.numberOfTapsRequired = tapNumber
+    addGestureRecognizer(tap)
+    isUserInteractionEnabled = true
+  }
 }

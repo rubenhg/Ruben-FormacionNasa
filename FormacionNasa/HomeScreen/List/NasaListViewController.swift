@@ -11,6 +11,7 @@ import UIKit
 class NasaListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
 
@@ -20,7 +21,7 @@ class NasaListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleLabel.text = "List"
         self.tableView.dataSource = self
         self.tableView.delegate = self
         tableView.register(UINib(nibName: "NasaTableViewCell", bundle: nil), forCellReuseIdentifier: "nasaTableViewCell")
@@ -29,24 +30,24 @@ class NasaListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "nasaTableViewCell", for: indexPath) as! NasaTableViewCell
         cell.titleLabel.text = nasaData?.title
         cell.dateLabel.text = nasaData?.date
-        cell.imageV.image = UIImage(url: URL(string: nasaData?.image ?? ""))
+       // cell.imageV.image = UIImage(url: URL(string: nasaData?.image ?? ""))
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        let detailVC = storyBoard.instantiateViewController(withIdentifier: "tabBarController") as!
-//        tabBarController.modalPresentationStyle = .fullScreen
-//        self.present(tabBarController, animated: true, completion: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let detailVC = storyBoard.instantiateViewController(withIdentifier: "detailViewController") as! DetailViewController
+        detailVC.modalPresentationStyle = .fullScreen
+        self.present(detailVC, animated: true, completion: nil)
         
     }
     
