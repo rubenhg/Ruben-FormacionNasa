@@ -11,8 +11,6 @@ import UIKit
 class NasaCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    let items = ["Item 1", "Item2", "Item3", "Item4"]
 
     
     override func viewDidLoad() {
@@ -21,33 +19,22 @@ class NasaCollectionViewController: UIViewController, UICollectionViewDelegate, 
         self.collectionView.dataSource = self
         self.collectionView.register(UINib(nibName: "NasaCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "nasaCollectionViewCell")
         
-        
-        
         self.view.backgroundColor = .red
 
-        // Do any additional setup after loading the view.
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        items.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "nasaCollectionViewCell", for: indexPath) as! NasaCollectionViewCell
-        cell.titleLabel.text = items[indexPath.row]
+        cell.titleLabel.text = nasaData?.title
+        cell.dateLabel.text = nasaData?.date
+        cell.image.image = UIImage(url: URL(string: nasaData?.image ?? ""))
        
         return cell
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

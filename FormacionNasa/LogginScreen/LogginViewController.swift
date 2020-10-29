@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Alamofire
 
 class LogginViewController: UIViewController {
     
@@ -18,9 +19,9 @@ class LogginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setData(date: "2020-10-22")
         setTexts()
-        
-        // Do any additional setup after loading the view.
+
     }
     
     func setTexts(){
@@ -33,13 +34,13 @@ class LogginViewController: UIViewController {
     @IBAction func registerAction(_ sender: Any) {
         if let email = emailTextField.text , let password = passwordTextField.text {
             Auth.auth().createUser(withEmail: email, password: password) { (completion, error) in
-                
+
                 if  error == nil{
                     let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
                     let tabBarController = storyBoard.instantiateViewController(withIdentifier: "tabBarController") as! UITabBarController
                     tabBarController.modalPresentationStyle = .fullScreen
                     self.present(tabBarController, animated: true, completion: nil)
-                    
+
                 }else{
                     let alert = UIAlertController(title: "Error", message: "Se ha producido un error en el registro de usuario. Compruebe que los datos introducidos sean correctos", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Cerrar", style: .default))
@@ -47,6 +48,7 @@ class LogginViewController: UIViewController {
                 }
             }
         }
+        
     }
     
     @IBAction func logginAction(_ sender: Any) {
@@ -54,7 +56,7 @@ class LogginViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { (completion, error) in
                 
                 if  error == nil{
-                   let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                    let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
                     let tabBarController = storyBoard.instantiateViewController(withIdentifier: "tabBarController") as! UITabBarController
                     tabBarController.modalPresentationStyle = .fullScreen
                     self.present(tabBarController, animated: true, completion: nil)
@@ -67,15 +69,17 @@ class LogginViewController: UIViewController {
                 }
             }
         }
+    
+    func setData(date: String){
+        WebService.sharedInstance.getData(date: "") { (response, error) in
+               if response != nil {
+                nasaData = NasaData(fromJson: response!)
+    
+               } else {
+                   print(error ?? "Error: getConfigurationRoom")
+               }
+            }
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
