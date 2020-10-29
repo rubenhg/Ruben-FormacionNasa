@@ -30,7 +30,7 @@ class NasaCollectionViewController: UIViewController, UICollectionViewDelegate, 
         let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "nasaCollectionViewCell", for: indexPath) as! NasaCollectionViewCell
         cell.titleLabel.text = nasaData?.title
         cell.dateLabel.text = nasaData?.date
-        //cell.image.image = UIImage(url: URL(string: nasaData?.image ?? ""))
+        cell.image.image = UIImage(url: URL(string: nasaData?.image ?? ""))
        
         return cell
     }

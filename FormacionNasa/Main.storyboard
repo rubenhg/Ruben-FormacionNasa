@@ -166,7 +166,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.79022580389999997" green="0.87149709460000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="HZ6-tS-dwe" firstAttribute="leading" secondItem="EML-tp-BQZ" secondAttribute="leading" constant="57" id="4Z2-7u-kkZ"/>
                             <constraint firstItem="EML-tp-BQZ" firstAttribute="trailing" secondItem="HZ6-tS-dwe" secondAttribute="trailing" constant="57" id="4md-dm-Dz2"/>

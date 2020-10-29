@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //image.image = UIImage(url: URL(string: nasaData?.image ?? ""))
+        image.image = UIImage(url: URL(string: nasaData?.image ?? ""))
         titleLabel.text = nasaData?.title
         dateLabel.text = nasaData?.date
         descriptionLabel.text = nasaData?.explanation

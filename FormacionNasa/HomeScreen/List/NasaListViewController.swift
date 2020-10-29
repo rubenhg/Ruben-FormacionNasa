@@ -37,7 +37,7 @@ class NasaListViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "nasaTableViewCell", for: indexPath) as! NasaTableViewCell
         cell.titleLabel.text = nasaData?.title
         cell.dateLabel.text = nasaData?.date
-       // cell.imageV.image = UIImage(url: URL(string: nasaData?.image ?? ""))
+        cell.imageV.image = UIImage(url: URL(string: nasaData?.image ?? ""))
 
         return cell
     }
