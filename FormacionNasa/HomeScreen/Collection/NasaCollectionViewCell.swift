@@ -11,6 +11,10 @@ import UIKit
 class NasaCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    
+    
     
 
     override func awakeFromNib() {

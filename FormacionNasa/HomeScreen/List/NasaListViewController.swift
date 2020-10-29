@@ -10,37 +10,62 @@ import UIKit
 
 class NasaListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
     @IBOutlet weak var tableView: UITableView!
     
-     let items = ["Item 1", "Item2", "Item3", "Item4"]
 
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.tableView.dataSource = self
         self.tableView.delegate = self
         tableView.register(UINib(nibName: "NasaTableViewCell", bundle: nil), forCellReuseIdentifier: "nasaTableViewCell")
-        // Do any additional setup after loading the view.
-    }
+
+        }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "nasaTableViewCell", for: indexPath) as! NasaTableViewCell
-        cell.titleLabel.text = items[indexPath.row]
+        cell.titleLabel.text = nasaData?.title
+        cell.dateLabel.text = nasaData?.date
+        cell.imageV.image = UIImage(url: URL(string: nasaData?.image ?? ""))
 
         return cell
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        let detailVC = storyBoard.instantiateViewController(withIdentifier: "tabBarController") as!
+//        tabBarController.modalPresentationStyle = .fullScreen
+//        self.present(tabBarController, animated: true, completion: nil)
+        
     }
-    */
+    
+  
+        
+        
+    
 
+}
+
+extension UIImage {
+  convenience init?(url: URL?) {
+    guard let url = url else { return nil }
+            
+    do {
+      self.init(data: try Data(contentsOf: url))
+    } catch {
+      print("Cannot load image from url: \(url) with error: \(error)")
+      return nil
+    }
+  }
 }

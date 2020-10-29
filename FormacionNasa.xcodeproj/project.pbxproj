@@ -10,6 +10,8 @@
 		4F7AEA29952DCA9723CE3F74 /* Pods_FormacionNasaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B298C20B5A1E321FEF38B0 /* Pods_FormacionNasaTests.framework */; };
 		7D58D761254ACBE300139EA1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58D75F254ACBE300139EA1 /* DetailViewController.swift */; };
 		7D58D762254ACBE300139EA1 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D58D760254ACBE300139EA1 /* DetailViewController.xib */; };
+		7D58D765254ACEC900139EA1 /* NasaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58D764254ACEC900139EA1 /* NasaData.swift */; };
+		7D58D767254AD5AD00139EA1 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D58D766254AD5AD00139EA1 /* WebService.swift */; };
 		7D630A5A25417A120031B51E /* NasaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D630A5825417A120031B51E /* NasaTableViewCell.swift */; };
 		7D630A5B25417A120031B51E /* NasaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D630A5925417A120031B51E /* NasaTableViewCell.xib */; };
 		7D630A5E25417D460031B51E /* NasaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D630A5C25417D460031B51E /* NasaCollectionViewCell.swift */; };
@@ -55,6 +57,8 @@
 		64C68C568946CCBAB5C6BD23 /* Pods_FormacionNasa_FormacionNasaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormacionNasa_FormacionNasaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D58D75F254ACBE300139EA1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7D58D760254ACBE300139EA1 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		7D58D764254ACEC900139EA1 /* NasaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaData.swift; sourceTree = "<group>"; };
+		7D58D766254AD5AD00139EA1 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		7D630A5825417A120031B51E /* NasaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaTableViewCell.swift; sourceTree = "<group>"; };
 		7D630A5925417A120031B51E /* NasaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NasaTableViewCell.xib; sourceTree = "<group>"; };
 		7D630A5C25417D460031B51E /* NasaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				7DDBA9DC25384AA900811277 /* Preview Content */,
 				7DDBAA0725385B9E00811277 /* Main.storyboard */,
 				7DFD112E2538714700A845AD /* GoogleService-Info.plist */,
+				7D58D764254ACEC900139EA1 /* NasaData.swift */,
+				7D58D766254AD5AD00139EA1 /* WebService.swift */,
 			);
 			path = FormacionNasa;
 			sourceTree = "<group>";
@@ -504,11 +510,13 @@
 				7D58D761254ACBE300139EA1 /* DetailViewController.swift in Sources */,
 				7D630A5E25417D460031B51E /* NasaCollectionViewCell.swift in Sources */,
 				7DDBAA0625385B4400811277 /* LogginViewController.swift in Sources */,
+				7D58D765254ACEC900139EA1 /* NasaData.swift in Sources */,
 				7DDBAA0D2538662D00811277 /* NasaCollectionViewController.swift in Sources */,
 				7DDBA9D525384AA800811277 /* AppDelegate.swift in Sources */,
 				7D630A5A25417A120031B51E /* NasaTableViewCell.swift in Sources */,
 				7DDBAA0F2538663B00811277 /* NasaListViewController.swift in Sources */,
 				7DDBA9D725384AA800811277 /* SceneDelegate.swift in Sources */,
+				7D58D767254AD5AD00139EA1 /* WebService.swift in Sources */,
 				7DDBA9D925384AA800811277 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
